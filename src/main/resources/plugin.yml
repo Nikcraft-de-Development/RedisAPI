@@ -1,0 +1,7 @@
+name: RedisAPI
+version: '${version}'
+main: de.einnik.redisapi.RedisAPI
+api-version: '1.21'
+author: "EinNik"
+depend:
+  - LuckPerms
