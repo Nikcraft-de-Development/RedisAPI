@@ -1,11 +1,22 @@
 plugins {
     id 'java'
     id 'maven-publish'
-    id 'java-library'
 }
 
 group = 'com.github.Nikcraft-de-Development'
-version = '1.0.2'
+version = '1.0.3'
+
+jar {
+    archiveBaseName = 'RedisAPI'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
 
 repositories {
     mavenCentral()
