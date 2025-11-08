@@ -16,6 +16,7 @@ public abstract class ScoreBoardUpdater {
 
     public ScoreBoardUpdater(String identifier){
         this.identifier = identifier;
+        start();
     }
 
     public void start() {

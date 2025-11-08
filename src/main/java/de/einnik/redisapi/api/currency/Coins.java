@@ -7,31 +7,31 @@ public class Coins {
 
     private static final Currency currency = new Currency("coins");
 
-    public void setCoins(UUID uuid, int amount){
+    public static void setCoins(UUID uuid, int amount){
         currency.set(uuid, amount);
     }
 
-    public int get(UUID uuid){
+    public static int get(UUID uuid){
         return currency.get(uuid);
     }
 
-    public void add(UUID uuid, int amount){
+    public static void add(UUID uuid, int amount){
         currency.add(uuid, amount);
     }
 
-    public void remove(UUID uuid, int amount){
+    public static void remove(UUID uuid, int amount){
         currency.remove(uuid, amount);
     }
 
-    public void delete(UUID uuid){
+    public static void delete(UUID uuid){
         currency.delete(uuid);
     }
 
-    public boolean exists(UUID uuid){
+    public static boolean exists(UUID uuid){
         return currency.exists(uuid);
     }
 
-    public String format(UUID uuid){
+    public static String format(UUID uuid){
         return currency.format(uuid);
     }
 }

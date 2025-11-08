@@ -28,12 +28,12 @@ public final class RedisAPI extends JavaPlugin {
         ProfileManager.saveValue();
     }
 
-    private void registerListeners(){
-        Bukkit.getPluginManager().registerEvents(new ProfileManager(), this);
+    public static RedisAPI getInstance() {
+        return instance != null ? instance : (RedisAPI) Bukkit.getPluginManager().getPlugin("RedisAPI");
     }
 
-    public static RedisAPI getInstance(){
-        return instance;
+    private void registerListeners(){
+        Bukkit.getPluginManager().registerEvents(new ProfileManager(), this);
     }
 
     public static RedisCore getRedisCore(){
