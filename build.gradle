@@ -4,7 +4,7 @@ plugins {
     id 'java-library'
 }
 
-group = 'de.nikcraft'
+group = 'com.github.Nikcraft-de-Development'
 version = '1.0.0'
 
 repositories {
