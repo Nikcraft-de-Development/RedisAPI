@@ -2,10 +2,16 @@ package de.einnik.redisapi.db.types;
 
 import de.einnik.redisapi.db.enums.MessageAble;
 import de.einnik.redisapi.db.enums.ProfileState;
+import lombok.Getter;
+import lombok.Setter;
 
 @SuppressWarnings("unused")
 public class Profile {
+    @Getter
+    @Setter
     String status = null;
+    @Getter
+    @Setter
     ProfileState state = null;
     boolean friend_requests = true;
     boolean friend_jump = true;
@@ -13,22 +19,6 @@ public class Profile {
     MessageAble party_invites = MessageAble.ALL;
     MessageAble msg_messages = MessageAble.ALL;
     ProfileState online = ProfileState.ONLINE;
-
-    public void setStatus(String set){
-        status = set;
-    }
-
-    public String getStatus(){
-        return status;
-    }
-
-    public void setState(ProfileState set){
-        state = set;
-    }
-
-    public ProfileState getState(){
-        return state;
-    }
 
     public void setFriendRequests(boolean set){
         friend_requests = set;
