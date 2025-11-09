@@ -11,7 +11,7 @@ public final class RedisCore {
     private JedisPool pool;
 
     public RedisCore(boolean local){
-        if (local) connect("127.0.0.1", 6379, "");
+        if (local) connect("127.0.0.1", 63790, "");
     }
 
     public void connect(String host, int port, String password){
