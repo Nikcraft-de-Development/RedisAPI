@@ -1,6 +1,7 @@
 package de.einnik.redisapi.gui.items;
 
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.TextComponent;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
@@ -9,7 +10,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.List;
 
-public record BasicItem(Material material, Component name, boolean shine, Component[] lore, int amount) implements MenuItem {
+public record BasicItem(Material material, Component name, boolean shine, TextComponent[] lore, int amount) implements MenuItem {
 
     private static ItemStack item;
 

@@ -2,6 +2,7 @@ package de.einnik.redisapi.gui.items;
 
 import de.einnik.redisapi.RedisAPI;
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -18,7 +19,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.logging.Level;
 
-public record HeadItem(Component name, boolean shine, Component[] lore, String value, int amount) implements MenuItem {
+public record HeadItem(Component name, boolean shine, TextComponent[] lore, String value, int amount) implements MenuItem {
 
     private static ItemStack item;
 
