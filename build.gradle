@@ -5,10 +5,19 @@ plugins {
 }
 
 group = 'com.github.Nikcraft-de-Development'
-version = '1.1.4'
+version = '1.1.5'
 
 jar {
     archiveBaseName = 'RedisAPI'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifactId = 'RedisAPI'
+        }
+    }
 }
 
 repositories {
