@@ -1,21 +1,14 @@
 plugins {
     id 'java'
     id 'maven-publish'
+    id 'io.freefair.lombok' version '8.6'
 }
 
 group = 'com.github.Nikcraft-de-Development'
-version = '1.0.4'
+version = '1.1.4'
 
 jar {
     archiveBaseName = 'RedisAPI'
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-        }
-    }
 }
 
 repositories {
@@ -31,6 +24,7 @@ dependencies {
     compileOnly("redis.clients:jedis:5.1.0")
     compileOnly("net.luckperms:api:5.4")
     compileOnly("org.projectlombok:lombok:1.18.30");
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
 }
 
 def targetJavaVersion = 21
