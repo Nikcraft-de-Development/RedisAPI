@@ -20,7 +20,7 @@ repositories {
 ### API hinzufügen
 ```
 dependencies {
-    compileOnly("com.github.Nikcraft-de-Development:RedisAPI:1.0.3") <!-- ggf. Version ersetzen --!>
+    compileOnly("com.github.Nikcraft-de-Development:RedisAPI:1.1.5") <!-- ggf. Version ersetzen --!>
 }
 ```
 
