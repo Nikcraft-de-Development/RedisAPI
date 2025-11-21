@@ -1,5 +1,7 @@
 package de.einnik.redisapi.scoreboard;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -15,10 +17,12 @@ import java.util.stream.Collectors;
 
 public class TextBoard {
 
+    @Getter
     private final Player player;
     private final ScoreBoardUpdater updater;
     private HashMap<Integer, String> map = new HashMap<>();
     private int count = 0;
+    @Setter
     private String title;
 
     public TextBoard(Player player, ScoreBoardUpdater updater){
@@ -26,17 +30,14 @@ public class TextBoard {
         this.updater = updater;
     }
 
-    public Player getPlayer(){
-        return player;
-    }
-
-    public void setTitle(String title){
-        this.title = title;
-    }
-
     public void addLine(String line){
         count++;
         map.put(count, line);
+    }
+
+    public void addEmptyLine(){
+        count++;
+        map.put(count, " ");
     }
 
     protected void sortLines(){
