@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.github.Nikcraft-de-Development'
-version = '1.0.3'
+version = '1.0.4'
 
 jar {
     archiveBaseName = 'RedisAPI'
